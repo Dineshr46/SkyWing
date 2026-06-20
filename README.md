@@ -73,46 +73,55 @@ SkyWing is a full-stack travel booking platform that allows users to discover de
 
 ## Project Structure
 
+```text
 travel-frontend/
 travel-backend/
-
+```
 
 ## Installation
 
 ### Frontend
 
+```bash
 cd travel-frontend
 npm install
 npm run dev
-
+```
 
 ### Backend
 
+```bash
 cd travel-backend
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
-
+```
 
 ## Screenshots
 
-* Home Page
-screenshots/home.png
+### Home Page
 
-* Destination Listing Page
-screenshots/destinations.png
+![Home Page](screenshots/home.png)
 
-* Destination Details Page
-screenshots/deatils.png
+### Destination Listing Page
 
-* Wishlist Page
-screenshots/wishlist.png
+![Destination Listing Page](screenshots/destinations.png)
 
-* My Bookings Page
-screenshots/bookings.png
+### Destination Details Page
 
-* Login
-screenshots/login.png
+![Destination Details Page](screenshots/details.png)
+
+### Wishlist Page
+
+![Wishlist Page](screenshots/wishlist.png)
+
+### My Bookings Page
+
+![My Bookings Page](screenshots/bookings.png)
+
+### Login Page
+
+![Login Page](screenshots/login.png)
 
 
 ## Future Improvements
