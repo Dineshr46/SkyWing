@@ -140,7 +140,7 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-CORS_ALLOW_ORIGINS = [
+CORS_ALLOWED_ORIGINS = [
     "https://sky-wing-zeta.vercel.app",
 ]
 
