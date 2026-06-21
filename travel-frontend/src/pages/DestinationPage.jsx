@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import SearchBar from "../components/SearchBar";
 import Destinations from "../components/Destinations";
+import { API_URL } from "../config";
 
 function DestinationPage (){
     const [search, setSearch] = useState("");
@@ -9,7 +10,7 @@ function DestinationPage (){
     const [sortBy, setSortBy] = useState("");
 
     useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/destinations/")
+    fetch(`${API_URL}/api/destinations/`)
         .then((response) => response.json())
         .then((data) => setPlaces(data))
         .catch((error) => console.error(error));

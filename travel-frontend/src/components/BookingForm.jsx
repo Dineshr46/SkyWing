@@ -1,5 +1,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { API_URL } from "../config";
 
 function BookingForm({ destinationId}){
     const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ function BookingForm({ destinationId}){
 
         try{
             const response = await fetch(
-                "http://127.0.0.1:8000/api/destinations/book/",
+                `${API_URL}/api/destinations/book/`,
                 {
                     method: "POST",
                     headers: {

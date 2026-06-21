@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { API_URL } from "../config";
 
 function MyBookings() {
     const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
         fetch(
-            "http://127.0.0.1:8000/api/destinations/my-bookings/",
+            `${API_URL}/api/destinations/my-bookings/`,
             {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("access")}`,
@@ -18,7 +19,7 @@ function MyBookings() {
 
     const cancelBooking = async (id) => {
         const response = await fetch(
-            `http://127.0.0.1:8000/api/destinations/bookings/cancel/${id}/`,
+            `${API_URL}/api/destinations/bookings/cancel/${id}/`,
             {
                 method: "DELETE",
                 headers: {

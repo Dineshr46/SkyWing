@@ -2,13 +2,14 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import BookingForm from "../components/BookingForm";
 import toast from "react-hot-toast";
+import { API_URL } from "../config";
 
 function DestinationDetails() {
     const {id} = useParams();
     const [destination, setDestination] = useState(null);
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/destinations/${id}/`)
+        fetch(`${API_URL}/api/destinations/${id}/`)
             .then((response) => {
                 if(!response.ok) {
                     throw new Error("Destination not found");
@@ -26,7 +27,7 @@ function DestinationDetails() {
     const addToWishlist = async () => {
         try {
             const response = await fetch(
-                "http://127.0.0.1:8000/api/destinations/wishlist/add/",
+                `${API_URL}/api/destinations/wishlist/add/`,
                 {
                     method: "POST",
                     headers: {

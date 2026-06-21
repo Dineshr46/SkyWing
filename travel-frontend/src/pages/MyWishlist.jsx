@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { API_URL } from "../config";
 
 function MyWishlist() {
     const [wishlist, setWishlist] = useState([]);
 
     useEffect(() => {
         fetch(
-            "http://127.0.0.1:8000/api/destinations/wishlist/",
+            `${API_URL}/api/destinations/wishlist/`,
             {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("access")}`,
@@ -23,7 +24,7 @@ function MyWishlist() {
 
     const removeWishlist = async (id) => {
         const response = await fetch(
-            `http://127.0.0.1:8000/api/destinations/wishlist/remove/${id}/`,
+            `${API_URL}/api/destinations/wishlist/remove/${id}/`,
             {
                 method: "DELETE",
                 headers: {

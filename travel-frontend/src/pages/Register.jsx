@@ -1,6 +1,7 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../config";
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ function Register() {
 
         try{
             const response = await fetch(
-                "http://127.0.0.1:8000/api/destinations/register/",
+                `${API_URL}/api/destinations/register/`,
                 {
                     method: "POST",
                     headers: {

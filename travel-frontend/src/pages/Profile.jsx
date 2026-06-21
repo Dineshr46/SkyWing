@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { API_URL } from "../config";
 
 function Profile() {
     const [profile, setProfile] = useState(null);
 
     useEffect(() => {
         fetch(
-            "http://127.0.0.1:8000/api/destinations/profile/",
+            `${API_URL}/api/destinations/profile/`,
             {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("access")}`,
