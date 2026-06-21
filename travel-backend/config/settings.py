@@ -143,3 +143,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 CORS_ALLOW_ORIGINS = [
     "https://sky-wing-zeta.vercel.app",
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://sky-wing-zeta.vercel.app",
+]
