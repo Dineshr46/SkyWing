@@ -48,10 +48,10 @@ function DestinationDetails() {
             if (response.ok) {
                 toast.success("Added to Wishlist ❤️");
             } else {
-                toast.error(data.message);
+                toast.error("Save to Wishlist Failed");
             }
         } catch (error) {
-            console.error("Save to Wishlist Failed");
+            console.error(error);
         }
     };
 
