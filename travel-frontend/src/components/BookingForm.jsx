@@ -42,7 +42,7 @@ function BookingForm({ destinationId}){
                 toast.success("Booking Successfull");
             }
             else{
-                toast.success("Booking Failed");
+                toast.error("Booking Failed");
             }
         }
         catch(error){

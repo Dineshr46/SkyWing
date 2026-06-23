@@ -51,7 +51,7 @@ function DestinationDetails() {
                 toast.error(data.message);
             }
         } catch (error) {
-            console.error(error);
+            console.error("Save to Wishlist Failed");
         }
     };
 
