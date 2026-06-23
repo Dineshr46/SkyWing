@@ -51,7 +51,7 @@ function Footer() {
                         </h3>
 
                         <ul className="space-y-2 text-gray-400">
-                            <li>Email: support@travelx.com</li>
+                            <li>Email: support@skywing.com</li>
                             <li>Phone: +91 9876543210</li>
                             <li>India</li>
                         </ul>
