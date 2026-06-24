@@ -2,6 +2,8 @@
 
 SkyWing is a full-stack travel booking platform that allows users to discover destinations, manage wishlists, book trips, and track their travel plans through a modern and responsive web application.
 
+Live Demo: https://sky-wing-zeta.vercel.app
+
 ## Features
 
 ### Authentication
